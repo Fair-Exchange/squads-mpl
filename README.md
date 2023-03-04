@@ -15,7 +15,7 @@ Technical information about SMPL [can be found in the program README.md](https:/
 # Addresses
 ### Mainnet, Testnet, & Devnet
   * Squads V3 on-chain program: [sqmX4MbVkp9dpniVfqqkeb3wMUCruhSgtrcrZFQiZfi](https://explorer.solana.com/address/sqmX4MbVkp9dpniVfqqkeb3wMUCruhSgtrcrZFQiZfi)
-  * Program manager: [sqmX4MbVkp9dpniVfqqkeb3wMUCruhSgtrcrZFQiZfi](https://explorer.solana.com/address/sqmX4MbVkp9dpniVfqqkeb3wMUCruhSgtrcrZFQiZfi)
+  * Program manager: [sqmX4MbVkp9dpniVfqqkeb3wMUCruhSgtrcrZFQiZfi](https://explorer.safecoin.org/address/sqmX4MbVkp9dpniVfqqkeb3wMUCruhSgtrcrZFQiZfi)
 
 The immutable (non-upgradeable program is located at) [ will be vailable soon]
 (https://explorer.solana.com/address/soon)
