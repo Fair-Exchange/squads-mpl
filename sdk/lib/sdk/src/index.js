@@ -38,14 +38,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const web3_js_1 = require("@solana/web3.js");
+const web3_js_1 = require("@safecoin/web3.js");
 const constants_1 = require("./constants");
 const squads_mpl_json_1 = __importDefault(require("../../target/idl/squads_mpl.json"));
 const program_manager_json_1 = __importDefault(require("../../target/idl/program_manager.json"));
-const anchor_1 = require("@coral-xyz/anchor");
+const anchor_1 = require("@safely-project/anchor");
 const address_1 = require("./address");
 const bn_js_1 = __importDefault(require("bn.js"));
-const anchor = __importStar(require("@coral-xyz/anchor"));
+const anchor = __importStar(require("@safely-project/anchor"));
 const tx_builder_1 = require("./tx_builder");
 const transactions_1 = require("../../helpers/transactions");
 class Squads {
@@ -63,13 +63,13 @@ class Squads {
         return new Squads(Object.assign({ connection: new web3_js_1.Connection(endpoint, options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
     }
     static mainnet(wallet, options) {
-        return new Squads(Object.assign({ connection: new web3_js_1.Connection("https://api.mainnet-beta.solana.com", options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
+        return new Squads(Object.assign({ connection: new web3_js_1.Connection("https://api.mainnet-beta.safecoin.org", options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
     }
     static devnet(wallet, options) {
-        return new Squads(Object.assign({ connection: new web3_js_1.Connection("https://api.devnet.solana.com", options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
+        return new Squads(Object.assign({ connection: new web3_js_1.Connection("https://api.devnet.safecoin.org", options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
     }
     static localnet(wallet, options) {
-        return new Squads(Object.assign({ connection: new web3_js_1.Connection("http://localhost:8899", options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
+        return new Squads(Object.assign({ connection: new web3_js_1.Connection("http://localhost:8328", options === null || options === void 0 ? void 0 : options.commitmentOrConfig), wallet }, options));
     }
     _addPublicKeys(items, addresses) {
         return items.map((item, index) => item ? Object.assign(Object.assign({}, item), { publicKey: addresses[index] }) : null);

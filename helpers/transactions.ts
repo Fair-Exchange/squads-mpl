@@ -1,5 +1,5 @@
-import * as anchor from "@coral-xyz/anchor";
-import { Connection } from "@solana/web3.js";
+import * as anchor from "@safely-project/anchor";
+import { Connection } from "@safecoin/web3.js";
 
 // some TX/IX helper functions
 export const createTestTransferTransaction = async (

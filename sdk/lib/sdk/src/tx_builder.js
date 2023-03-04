@@ -38,7 +38,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TransactionBuilder = void 0;
 const address_1 = require("./address");
 const bn_js_1 = __importDefault(require("bn.js"));
-const anchor = __importStar(require("@coral-xyz/anchor"));
+const anchor = __importStar(require("@safely-project/anchor"));
 class TransactionBuilder {
     constructor(methods, managerMethods, provider, multisig, authorityIndex, programId, instructions) {
         this.methods = methods;

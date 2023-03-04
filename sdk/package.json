@@ -11,8 +11,8 @@
     "build": "./build.sh"
   },
   "dependencies": {
-    "@coral-xyz/anchor": "^0.26.0",
-    "@solana/web3.js": "^1.73.2",
+    "@safely-project/anchor": "^0.26.0",
+    "@safecoin/web3.js": "^1.73.2",
     "bn.js": "^5.2.1"
   },
   "devDependencies": {

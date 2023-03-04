@@ -1,4 +1,4 @@
-import { PublicKey } from "@solana/web3.js";
+import { PublicKey } from "@safecoin/web3.js";
 import BN from "bn.js";
 export declare const getMsPDA: (create_key: PublicKey, programId: PublicKey) => [PublicKey, number];
 export declare const getTxPDA: (msPDA: PublicKey, txIndexBN: BN, programId: PublicKey) => [PublicKey, number];

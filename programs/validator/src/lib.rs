@@ -1,4 +1,4 @@
-use anchor_lang::prelude::*;
+use safe_anchor_lang::prelude::*;
 use state::validator::*;
 use squads_mpl::state::*;
 use squads_mpl::errors::*;

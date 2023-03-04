@@ -620,10 +620,10 @@
               "id": "1033",
               "name": "InsecureAnchorInitIfNeeded",
               "shortDescription": {
-                "text": "The `init_if_needed` keyword in anchor-lang prior to v0.24.x has a critical security bug"
+                "text": "The `init_if_needed` keyword in safe-anchor-lang prior to v0.24.x has a critical security bug"
               },
               "fullDescription": {
-                "text": "The `init_if_needed` keyword in anchor-lang prior to v0.24.x has a critical security bug"
+                "text": "The `init_if_needed` keyword in safe-anchor-lang prior to v0.24.x has a critical security bug"
               },
               "helpUri": "https://twitter.com/armaniferrante/status/1516425854183690257",
               "help": {
@@ -639,10 +639,10 @@
               "id": "1034",
               "name": "InsecureSPLTokenCPI",
               "shortDescription": {
-                "text": "The spl_token account may be arbitrary prior to version v3.1.1"
+                "text": "The safe_token account may be arbitrary prior to version v3.1.1"
               },
               "fullDescription": {
-                "text": "The spl_token account may be arbitrary prior to version v3.1.1"
+                "text": "The safe_token account may be arbitrary prior to version v3.1.1"
               },
               "helpUri": "https://github.com/project-serum/sealevel-attacks/tree/master/programs/5-arbitrary-cpi",
               "help": {
@@ -663,9 +663,9 @@
               "fullDescription": {
                 "text": "The associated token account is missing PDA key check and may be faked"
               },
-              "helpUri": "https://medium.com/coinmonks/solana-programs-part-2-understanding-spl-associated-token-account-25082b9b5471",
+              "helpUri": "https://medium.com/coinmonks/safecoin-programs-part-2-understanding-safe-associated-token-account-25082b9b5471",
               "help": {
-                "text": "Information regarding this issue can be found at https://medium.com/coinmonks/solana-programs-part-2-understanding-spl-associated-token-account-25082b9b5471"
+                "text": "Information regarding this issue can be found at https://medium.com/coinmonks/safecoin-programs-part-2-understanding-safe-associated-token-account-25082b9b5471"
               },
               "properties": {
                 "tags": [
@@ -677,10 +677,10 @@
               "id": "1036",
               "name": "InsecureAccountRealloc",
               "shortDescription": {
-                "text": "The account realloc in solana_program prior to v1.10.29 may cause programs to malfunction"
+                "text": "The account realloc in safecoin_program prior to v1.10.29 may cause programs to malfunction"
               },
               "fullDescription": {
-                "text": "The account realloc in solana_program prior to v1.10.29 may cause programs to malfunction"
+                "text": "The account realloc in safecoin_program prior to v1.10.29 may cause programs to malfunction"
               },
               "helpUri": "https://twitter.com/jacobvcreech/status/1543968742606077952",
               "help": {
@@ -753,14 +753,14 @@
               "id": "2004",
               "name": "IncorrectDivisionLogic",
               "shortDescription": {
-                "text": "Incorrect checked_div instead of checked_ceil_div (spl-token-swap vulnerability: stable curve division)"
+                "text": "Incorrect checked_div instead of checked_ceil_div (safe-token-swap vulnerability: stable curve division)"
               },
               "fullDescription": {
-                "text": "Incorrect checked_div instead of checked_ceil_div (spl-token-swap vulnerability: stable curve division)"
+                "text": "Incorrect checked_div instead of checked_ceil_div (safe-token-swap vulnerability: stable curve division)"
               },
-              "helpUri": "https://github.com/solana-labs/solana-program-library/pull/2942",
+              "helpUri": "https://github.com/fair-exchange/safecoin-program-library/pull/2942",
               "help": {
-                "text": "Information regarding this issue can be found at https://github.com/solana-labs/solana-program-library/pull/2942"
+                "text": "Information regarding this issue can be found at https://github.com/fair-exchange/safecoin-program-library/pull/2942"
               },
               "properties": {
                 "tags": [
@@ -853,9 +853,9 @@
               "fullDescription": {
                 "text": "The token account's amount may be incorrect without calling reload after CPI"
               },
-              "helpUri": "https://book.anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account",
+              "helpUri": "https://book.safe-anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account",
               "help": {
-                "text": "Information regarding this issue can be found at https://book.anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account"
+                "text": "Information regarding this issue can be found at https://book.safe-anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account"
               },
               "properties": {
                 "tags": [
@@ -872,9 +872,9 @@
               "fullDescription": {
                 "text": "The unstake instruction may be missing an access_control account validation"
               },
-              "helpUri": "https://docs.rs/anchor-lang/latest/anchor_lang/attr.access_control.html",
+              "helpUri": "https://docs.rs/safe-anchor-lang/latest/safe_anchor_lang/attr.access_control.html",
               "help": {
-                "text": "Information regarding this issue can be found at https://docs.rs/anchor-lang/latest/anchor_lang/attr.access_control.html"
+                "text": "Information regarding this issue can be found at https://docs.rs/safe-anchor-lang/latest/safe_anchor_lang/attr.access_control.html"
               },
               "properties": {
                 "tags": [
@@ -908,7 +908,7 @@
       "properties": {
         "commit": "8671704b0a9a434a8b135abfb8b047279453ba19",
         "title": "programs_program-manager",
-        "version": "solana build 1660018388"
+        "version": "safecoin build 1660018388"
       }
     },
     {
@@ -1529,10 +1529,10 @@
               "id": "1033",
               "name": "InsecureAnchorInitIfNeeded",
               "shortDescription": {
-                "text": "The `init_if_needed` keyword in anchor-lang prior to v0.24.x has a critical security bug"
+                "text": "The `init_if_needed` keyword in safe-anchor-lang prior to v0.24.x has a critical security bug"
               },
               "fullDescription": {
-                "text": "The `init_if_needed` keyword in anchor-lang prior to v0.24.x has a critical security bug"
+                "text": "The `init_if_needed` keyword in safe-anchor-lang prior to v0.24.x has a critical security bug"
               },
               "helpUri": "https://twitter.com/armaniferrante/status/1516425854183690257",
               "help": {
@@ -1548,10 +1548,10 @@
               "id": "1034",
               "name": "InsecureSPLTokenCPI",
               "shortDescription": {
-                "text": "The spl_token account may be arbitrary prior to version v3.1.1"
+                "text": "The safe_token account may be arbitrary prior to version v3.1.1"
               },
               "fullDescription": {
-                "text": "The spl_token account may be arbitrary prior to version v3.1.1"
+                "text": "The safe_token account may be arbitrary prior to version v3.1.1"
               },
               "helpUri": "https://github.com/project-serum/sealevel-attacks/tree/master/programs/5-arbitrary-cpi",
               "help": {
@@ -1572,9 +1572,9 @@
               "fullDescription": {
                 "text": "The associated token account is missing PDA key check and may be faked"
               },
-              "helpUri": "https://medium.com/coinmonks/solana-programs-part-2-understanding-spl-associated-token-account-25082b9b5471",
+              "helpUri": "https://medium.com/coinmonks/safecoin-programs-part-2-understanding-safe-associated-token-account-25082b9b5471",
               "help": {
-                "text": "Information regarding this issue can be found at https://medium.com/coinmonks/solana-programs-part-2-understanding-spl-associated-token-account-25082b9b5471"
+                "text": "Information regarding this issue can be found at https://medium.com/coinmonks/safecoin-programs-part-2-understanding-safe-associated-token-account-25082b9b5471"
               },
               "properties": {
                 "tags": [
@@ -1586,10 +1586,10 @@
               "id": "1036",
               "name": "InsecureAccountRealloc",
               "shortDescription": {
-                "text": "The account realloc in solana_program prior to v1.10.29 may cause programs to malfunction"
+                "text": "The account realloc in safecoin_program prior to v1.10.29 may cause programs to malfunction"
               },
               "fullDescription": {
-                "text": "The account realloc in solana_program prior to v1.10.29 may cause programs to malfunction"
+                "text": "The account realloc in safecoin_program prior to v1.10.29 may cause programs to malfunction"
               },
               "helpUri": "https://twitter.com/jacobvcreech/status/1543968742606077952",
               "help": {
@@ -1662,14 +1662,14 @@
               "id": "2004",
               "name": "IncorrectDivisionLogic",
               "shortDescription": {
-                "text": "Incorrect checked_div instead of checked_ceil_div (spl-token-swap vulnerability: stable curve division)"
+                "text": "Incorrect checked_div instead of checked_ceil_div (safe-token-swap vulnerability: stable curve division)"
               },
               "fullDescription": {
-                "text": "Incorrect checked_div instead of checked_ceil_div (spl-token-swap vulnerability: stable curve division)"
+                "text": "Incorrect checked_div instead of checked_ceil_div (safe-token-swap vulnerability: stable curve division)"
               },
-              "helpUri": "https://github.com/solana-labs/solana-program-library/pull/2942",
+              "helpUri": "https://github.com/fair-exchange/safecoin-program-library/pull/2942",
               "help": {
-                "text": "Information regarding this issue can be found at https://github.com/solana-labs/solana-program-library/pull/2942"
+                "text": "Information regarding this issue can be found at https://github.com/fair-exchange/safecoin-program-library/pull/2942"
               },
               "properties": {
                 "tags": [
@@ -1762,9 +1762,9 @@
               "fullDescription": {
                 "text": "The token account's amount may be incorrect without calling reload after CPI"
               },
-              "helpUri": "https://book.anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account",
+              "helpUri": "https://book.safe-anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account",
               "help": {
-                "text": "Information regarding this issue can be found at https://book.anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account"
+                "text": "Information regarding this issue can be found at https://book.safe-anchor-lang.com/anchor_in_depth/CPIs.html#reloading-an-account"
               },
               "properties": {
                 "tags": [
@@ -1781,9 +1781,9 @@
               "fullDescription": {
                 "text": "The unstake instruction may be missing an access_control account validation"
               },
-              "helpUri": "https://docs.rs/anchor-lang/latest/anchor_lang/attr.access_control.html",
+              "helpUri": "https://docs.rs/safe-anchor-lang/latest/safe_anchor_lang/attr.access_control.html",
               "help": {
-                "text": "Information regarding this issue can be found at https://docs.rs/anchor-lang/latest/anchor_lang/attr.access_control.html"
+                "text": "Information regarding this issue can be found at https://docs.rs/safe-anchor-lang/latest/safe_anchor_lang/attr.access_control.html"
               },
               "properties": {
                 "tags": [
@@ -1817,7 +1817,7 @@
       "properties": {
         "commit": "8671704b0a9a434a8b135abfb8b047279453ba19",
         "title": "programs_squads-mpl",
-        "version": "solana build 1660018388"
+        "version": "safecoin build 1660018388"
       }
     }
   ]

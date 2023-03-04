@@ -1,4 +1,4 @@
-use anchor_lang::prelude::*;
+use safe_anchor_lang::prelude::*;
 use squads_mpl::errors::MsError;
 
 use state::roles::*;
@@ -12,7 +12,7 @@ declare_id!("SMPLvKJwsyNGD6xf7Ph6VRpDGPa3DXV4uPHcTAnXe6r");
 
 #[program]
 pub mod roles {
-    use anchor_lang::solana_program::{program::invoke, system_instruction};
+    use safe_anchor_lang::safecoin_program::{program::invoke, system_instruction};
 
     use super::*;
 

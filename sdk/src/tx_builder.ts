@@ -3,11 +3,11 @@ import {
   ProgramManagerMethodsNamespace,
   SquadsMethodsNamespace,
 } from "./types";
-import { PublicKey, TransactionInstruction } from "@solana/web3.js";
+import { PublicKey, TransactionInstruction } from "@safecoin/web3.js";
 import { getAuthorityPDA, getIxPDA, getTxPDA } from "./address";
 import BN from "bn.js";
-import { AnchorProvider } from "@coral-xyz/anchor";
-import * as anchor from "@coral-xyz/anchor";
+import { AnchorProvider } from "@safely-project/anchor";
+import * as anchor from "@safely-project/anchor";
 import {createBlankTransaction, createTestTransferTransaction} from "../../helpers/transactions";
 
 export class TransactionBuilder {

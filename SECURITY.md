@@ -42,18 +42,18 @@ Confirm with the reporter that they agree with the severity assessment, and disc
 We offer bounties for critical security issues. Please see below for more details. Either a demonstration or a valid bug report is all that's necessary to submit a bug bounty. 
 A patch to fix the issue isn't required.
 #### Ability to Steal Funds
-$300,000 USD in locked SOL tokens (locked for 12 months)
+$300,000 USD in locked SAFE tokens (locked for 12 months)
 * theft of funds without users signature from any account 
 * theft of funds without users interaction with the Multisig program 
 * theft of funds that requires users signature - creating a Multisig program that drains funds.
 #### Loss of Availability / Ability to Freeze Funds
-$200,000 USD in locked SOL tokens (locked for 12 months): 
+$200,000 USD in locked SAFE tokens (locked for 12 months): 
 * Ability to freeze a User’s ability to claim funds from a Multisig
 #### Replay Attacks 
-$25,000 USD in locked SOL tokens (locked for 12 months): 
+$25,000 USD in locked SAFE tokens (locked for 12 months): 
 * Ability to replay a previously executed transaction involving a Squads Multisig 
 #### Settings Modifications
-$10,000 USD in locked SOL tokens (locked for 12 months): 
+$10,000 USD in locked SAFE tokens (locked for 12 months): 
 * Modification of any Multisig or module settings without proper authorization by the owners of the Multisig
 ### In Scope
 Squads V3 on-chain program () is in scope for the bounty program.

@@ -5,7 +5,7 @@ import {
   ConnectionConfig,
   TransactionInstruction,
   Signer,
-} from "@solana/web3.js";
+} from "@safecoin/web3.js";
 import {
   DEFAULT_MULTISIG_PROGRAM_ID,
   DEFAULT_PROGRAM_MANAGER_PROGRAM_ID,
@@ -14,8 +14,8 @@ import squadsMplJSON from "../../target/idl/squads_mpl.json";
 import {SquadsMpl} from "../../idl/squads_mpl";
 import programManagerJSON from "../../target/idl/program_manager.json";
 import {ProgramManager} from "../../idl/program_manager";
-import {Wallet} from "@coral-xyz/anchor/dist/cjs/provider";
-import {AnchorProvider, Program} from "@coral-xyz/anchor";
+import {Wallet} from "@safely-project/anchor/dist/cjs/provider";
+import {AnchorProvider, Program} from "@safely-project/anchor";
 import {
   InstructionAccount,
   ManagedProgramAccount,
@@ -35,9 +35,9 @@ import {
   getTxPDA,
 } from "./address";
 import BN from "bn.js";
-import * as anchor from "@coral-xyz/anchor";
+import * as anchor from "@safely-project/anchor";
 import {TransactionBuilder} from "./tx_builder";
-import { program } from "@coral-xyz/anchor/dist/cjs/native/system";
+import { program } from "@safely-project/anchor/dist/cjs/native/system";
 import { createTestTransferTransaction } from "../../helpers/transactions";
 
 class Squads {
@@ -108,7 +108,7 @@ class Squads {
   ) {
     return new Squads({
       connection: new Connection(
-          "https://api.mainnet-beta.solana.com",
+          "https://api.mainnet-beta.safecoin.org",
           options?.commitmentOrConfig
       ),
       wallet,
@@ -126,7 +126,7 @@ class Squads {
   ) {
     return new Squads({
       connection: new Connection(
-          "https://api.devnet.solana.com",
+          "https://api.devnet.safecoin.org",
           options?.commitmentOrConfig
       ),
       wallet,
@@ -144,7 +144,7 @@ class Squads {
   ) {
     return new Squads({
       connection: new Connection(
-          "http://localhost:8899",
+          "http://localhost:8328",
           options?.commitmentOrConfig
       ),
       wallet,

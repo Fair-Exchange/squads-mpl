@@ -643,7 +643,7 @@ exports.IDL = {
             "name": "IncomingInstruction",
             "docs": [
                 "Incoming instruction schema, used as an argument in the attach_instruction.",
-                "Identical to the solana struct for Instruction, but uses the MsAccountMeta.",
+                "Identical to the safecoin struct for Instruction, but uses the MsAccountMeta.",
                 "Provided for de/serialization purposes."
             ],
             "type": {
@@ -725,7 +725,7 @@ exports.IDL = {
         },
         {
             "code": 6006,
-            "name": "CannotRemoveSoloMember"
+            "name": "CannotRemoveSafeoMember"
         },
         {
             "code": 6007,

@@ -1,5 +1,5 @@
-use anchor_lang::{prelude::*, solana_program::instruction::Instruction};
-use anchor_lang::solana_program::borsh::get_instance_packed_len;
+use safe_anchor_lang::{prelude::*, safecoin_program::instruction::Instruction};
+use safe_anchor_lang::safecoin_program::borsh::get_instance_packed_len;
 
 #[account]
 pub struct ProgramManager {

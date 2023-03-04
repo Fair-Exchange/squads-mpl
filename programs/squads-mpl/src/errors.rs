@@ -3,7 +3,7 @@
     https://github.com/squads-protocol/squads-mpl
 */
 
-use anchor_lang::prelude::*;
+use safe_anchor_lang::prelude::*;
 
 #[error_code]
 pub enum MsError {
@@ -13,7 +13,7 @@ pub enum MsError {
     InvalidInstructionAccount,
     InvalidAuthorityIndex,
     TransactionAlreadyExecuted,
-    CannotRemoveSoloMember,
+    CannotRemoveSafeoMember,
     InvalidThreshold,
     DeprecatedTransaction,
     InstructionFailed,

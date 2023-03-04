@@ -16,6 +16,6 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-anchor-lang = "0.26.0"
-spl-token = {version = "3.1.0", features = ["no-entrypoint"]}
+safe-anchor-lang = { version = "0.26.0", path = "../../../anchor/lang"}
+safe-token = {version = "3.5.0", path = "../../../safecoin-program-library/token/program", features = ["no-entrypoint"]}
 squads-mpl = { path = "../squads-mpl", features = ["cpi"] }

@@ -1,4 +1,4 @@
-use anchor_lang::prelude::*;
+use safe_anchor_lang::prelude::*;
 use squads_mpl::{state::{Ms, MsTransaction}, errors::MsError, program::SquadsMpl};
 use squads_mpl::cpi::{
     accounts::{

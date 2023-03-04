@@ -1,5 +1,5 @@
-import { Connection, PublicKey, Commitment, ConnectionConfig, TransactionInstruction, Signer } from "@solana/web3.js";
-import { Wallet } from "@coral-xyz/anchor/dist/cjs/provider";
+import { Connection, PublicKey, Commitment, ConnectionConfig, TransactionInstruction, Signer } from "@safecoin/web3.js";
+import { Wallet } from "@safely-project/anchor/dist/cjs/provider";
 import { InstructionAccount, ManagedProgramAccount, MultisigAccount, ProgramManagerAccount, ProgramUpgradeAccount, TransactionAccount } from "./types";
 import { TransactionBuilder } from "./tx_builder";
 declare class Squads {

@@ -3,7 +3,7 @@
     https://github.com/squads-protocol/squads-mpl
 */
 
-use anchor_lang::prelude::*;
+use safe_anchor_lang::prelude::*;
 use crate::state::*;
 use crate::errors::*;
 

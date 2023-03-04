@@ -5,8 +5,8 @@
 
 use std::convert::TryInto;
 
-use anchor_lang::{prelude::*, solana_program::instruction::Instruction};
-use anchor_lang::solana_program::borsh::get_instance_packed_len;
+use safe_anchor_lang::{prelude::*, safecoin_program::instruction::Instruction};
+use safe_anchor_lang::safecoin_program::borsh::get_instance_packed_len;
 
 /// Ms is the basic state account for a multisig.
 #[account]
@@ -317,7 +317,7 @@ pub struct MsAccountMeta {
 }
 
 /// Incoming instruction schema, used as an argument in the attach_instruction.
-/// Identical to the solana struct for Instruction, but uses the MsAccountMeta.
+/// Identical to the safecoin struct for Instruction, but uses the MsAccountMeta.
 /// Provided for de/serialization purposes.
 #[derive(AnchorSerialize,AnchorDeserialize, Clone)]
 pub struct IncomingInstruction {

@@ -157,7 +157,7 @@ Lockfile:
     integrity sha512-E6A5Y/ijqpfMJ5psJvbw0kVTzLZFUcOFgs6eSM2M2iWE1lVRF18T6hWZVNl6zqZsoz98jgnNHtVGJMs+ds9A7A==
     dependencies:
       "@project-serum/borsh" "^0.2.5"
-      "@solana/web3.js" "^1.36.0"
+      "@safecoin/web3.js" "^1.36.0"
       base64-js "^1.5.1"
       bn.js "^5.1.2"
       bs58 "^4.0.1"
@@ -192,9 +192,9 @@ Lockfile:
     dependencies:
       buffer "~6.0.3"
   
-  "@solana/web3.js@^1.36.0":
+  "@safecoin/web3.js@^1.36.0":
     version "1.44.1"
-    resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.44.1.tgz#98bc2c07d5281087b332dd925e2d6723228d68b8"
+    resolved "https://registry.yarnpkg.com/@safecoin/web3.js/-/web3.js-1.44.1.tgz#98bc2c07d5281087b332dd925e2d6723228d68b8"
     integrity sha512-s9nJdNAfmQKvn7K+pGcDZyJXhVN0Dy4yX0DzO+8yHSju1dF/RGJCR5TAUaAb3sZJgM+zxgyPu/P16Ji5HkdNOQ==
     dependencies:
       "@babel/runtime" "^7.12.5"
@@ -1171,7 +1171,7 @@ Lockfile:
   no-case@^3.0.4:
     version "3.0.4"
     resolved "https://registry.yarnpkg.com/no-case/-/no-case-3.0.4.tgz#d361fd5c9800f558551a8369fc0dcd4662b6124d"
-    integrity sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==
+    integrity sha512-fgAN3jGAh+RoxUGZHTSAFEJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==
     dependencies:
       lower-case "^2.0.2"
       tslib "^2.0.3"

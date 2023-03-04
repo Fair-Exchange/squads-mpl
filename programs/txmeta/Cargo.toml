@@ -16,5 +16,5 @@ cpi = ["no-entrypoint"]
 default = []
 
 [dependencies]
-anchor-lang = "0.26.0"
+safe-anchor-lang = { version = "0.26.0", path = "../../../anchor/lang"}
 squads-mpl = { path = "../squads-mpl", features = ["no-entrypoint"] }

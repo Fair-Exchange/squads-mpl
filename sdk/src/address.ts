@@ -1,5 +1,5 @@
-import { PublicKey } from "@solana/web3.js";
-import { utils } from "@coral-xyz/anchor";
+import { PublicKey } from "@safecoin/web3.js";
+import { utils } from "@safely-project/anchor";
 import BN from "bn.js";
 
 export const getMsPDA = (create_key: PublicKey, programId: PublicKey) =>

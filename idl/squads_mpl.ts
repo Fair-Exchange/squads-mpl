@@ -640,7 +640,7 @@ export type SquadsMpl = {
       "name": "IncomingInstruction",
       "docs": [
         "Incoming instruction schema, used as an argument in the attach_instruction.",
-        "Identical to the solana struct for Instruction, but uses the MsAccountMeta.",
+        "Identical to the safecoin struct for Instruction, but uses the MsAccountMeta.",
         "Provided for de/serialization purposes."
       ],
       "type": {
@@ -722,7 +722,7 @@ export type SquadsMpl = {
     },
     {
       "code": 6006,
-      "name": "CannotRemoveSoloMember"
+      "name": "CannotRemoveSafeoMember"
     },
     {
       "code": 6007,
@@ -1397,7 +1397,7 @@ export const IDL: SquadsMpl = {
       "name": "IncomingInstruction",
       "docs": [
         "Incoming instruction schema, used as an argument in the attach_instruction.",
-        "Identical to the solana struct for Instruction, but uses the MsAccountMeta.",
+        "Identical to the safecoin struct for Instruction, but uses the MsAccountMeta.",
         "Provided for de/serialization purposes."
       ],
       "type": {
@@ -1479,7 +1479,7 @@ export const IDL: SquadsMpl = {
     },
     {
       "code": 6006,
-      "name": "CannotRemoveSoloMember"
+      "name": "CannotRemoveSafeoMember"
     },
     {
       "code": 6007,

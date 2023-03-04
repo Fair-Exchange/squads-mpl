@@ -33,7 +33,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createBlankTransaction = exports.createTestTransferTransaction = void 0;
-const anchor = __importStar(require("@coral-xyz/anchor"));
+const anchor = __importStar(require("@safely-project/anchor"));
 // some TX/IX helper functions
 const createTestTransferTransaction = (authority, recipient, amount = 1000000) => __awaiter(void 0, void 0, void 0, function* () {
     return anchor.web3.SystemProgram.transfer({

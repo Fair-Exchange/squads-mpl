@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import fs from "fs";
-import * as anchor from "@coral-xyz/anchor";
-import { Program } from "@coral-xyz/anchor";
+import * as anchor from "@safely-project/anchor";
+import { Program } from "@safely-project/anchor";
 import { SquadsMpl } from "../idl/squads_mpl";
 import { ProgramManager } from "../idl/program_manager";
 import { Roles } from "../idl/roles";
@@ -11,7 +11,7 @@ import {
   createTestTransferTransaction,
 } from "../helpers/transactions";
 import { execSync } from "child_process";
-import { LAMPORTS_PER_SOL, ParsedAccountData, SystemProgram } from "@solana/web3.js";
+import { LAMPORTS_PER_SAFE, ParsedAccountData, SystemProgram } from "@safecoin/web3.js";
 import Squads, {
   getMsPDA,
   getIxPDA,
@@ -30,23 +30,23 @@ const BPF_UPGRADE_ID = new anchor.web3.PublicKey(
 );
 
 const deploySmpl = () => {
-  const deployCmd = `solana program deploy --url localhost -v --program-id $(pwd)/target/deploy/squads_mpl-keypair.json $(pwd)/target/deploy/squads_mpl.so`;
+  const deployCmd = `safecoin program deploy --url localhost -v --program-id $(pwd)/target/deploy/squads_mpl-keypair.json $(pwd)/target/deploy/squads_mpl.so`;
   execSync(deployCmd);
 };
 
 const deployPm = () => {
-  const deployCmd = `solana program deploy --url localhost -v --program-id $(pwd)/target/deploy/program_manager-keypair.json $(pwd)/target/deploy/program_manager.so`;
+  const deployCmd = `safecoin program deploy --url localhost -v --program-id $(pwd)/target/deploy/program_manager-keypair.json $(pwd)/target/deploy/program_manager.so`;
   execSync(deployCmd);
 };
 
 const deployRoles = () => {
-  const deployCmd = `solana program deploy --url localhost -v --program-id $(pwd)/target/deploy/roles-keypair.json $(pwd)/target/deploy/roles.so`;
+  const deployCmd = `safecoin program deploy --url localhost -v --program-id $(pwd)/target/deploy/roles-keypair.json $(pwd)/target/deploy/roles.so`;
   execSync(deployCmd);
 };
 
 // will deploy a buffer for the program manager program
 const writeBuffer = (bufferKeypair: string) => {
-  const writeCmd = `solana program write-buffer --buffer ${bufferKeypair} --url localhost -v $(pwd)/target/deploy/program_manager.so`;
+  const writeCmd = `safecoin program write-buffer --buffer ${bufferKeypair} --url localhost -v $(pwd)/target/deploy/program_manager.so`;
   execSync(writeCmd);
 };
 
@@ -54,7 +54,7 @@ const setBufferAuthority = (
   bufferAddress: anchor.web3.PublicKey,
   authority: anchor.web3.PublicKey
 ) => {
-  const authCmd = `solana program set-buffer-authority --url localhost ${bufferAddress.toBase58()} --new-buffer-authority ${authority.toBase58()}`;
+  const authCmd = `safecoin program set-buffer-authority --url localhost ${bufferAddress.toBase58()} --new-buffer-authority ${authority.toBase58()}`;
   execSync(authCmd);
 };
 
@@ -63,9 +63,9 @@ const setProgramAuthority = (
   authority: anchor.web3.PublicKey
 ) => {
   try {
-    const logsCmd = `solana program show --url localhost --programs`;
+    const logsCmd = `safecoin program show --url localhost --programs`;
     execSync(logsCmd, { stdio: "inherit" });
-    const authCmd = `solana program set-upgrade-authority --url localhost ${programAddress.toBase58()} --new-upgrade-authority ${authority.toBase58()}`;
+    const authCmd = `safecoin program set-upgrade-authority --url localhost ${programAddress.toBase58()} --new-upgrade-authority ${authority.toBase58()}`;
     execSync(authCmd, { stdio: "inherit" });
   } catch (e) {
     console.log(e);
@@ -540,7 +540,7 @@ describe("Programs", function(){
         const testIx = await createTestTransferTransaction(
           authorityPDA,
           testPayee.publicKey,
-          anchor.web3.LAMPORTS_PER_SOL * 100
+          anchor.web3.LAMPORTS_PER_SAFE * 100
         );
 
         // add the instruction to the transaction
@@ -711,7 +711,7 @@ describe("Programs", function(){
           try {
             await provider.connection.requestAirdrop(
               memberList[i].publicKey,
-              anchor.web3.LAMPORTS_PER_SOL
+              anchor.web3.LAMPORTS_PER_SAFE
             );
             const approveTx = await program.methods
               .approveTransaction()
@@ -738,7 +738,7 @@ describe("Programs", function(){
         const payer = memberList[4];
         await provider.connection.requestAirdrop(
           payer.publicKey,
-          anchor.web3.LAMPORTS_PER_SOL
+          anchor.web3.LAMPORTS_PER_SAFE
         );
 
         await agnosticExecute(squads, txPDA, payer);
@@ -960,7 +960,7 @@ describe("Programs", function(){
           try {
             await provider.connection.requestAirdrop(
               memberList[i].publicKey,
-              anchor.web3.LAMPORTS_PER_SOL
+              anchor.web3.LAMPORTS_PER_SAFE
             );
             const approveTx = await program.methods
               .approveTransaction()
@@ -1300,19 +1300,19 @@ describe("Programs", function(){
 
         await provider.connection.requestAirdrop(
           userWithInitRole.publicKey,
-          anchor.web3.LAMPORTS_PER_SOL
+          anchor.web3.LAMPORTS_PER_SAFE
         );
         await provider.connection.requestAirdrop(
           userWithVoteRole.publicKey,
-          anchor.web3.LAMPORTS_PER_SOL
+          anchor.web3.LAMPORTS_PER_SAFE
         );
         await provider.connection.requestAirdrop(
           userWithExecuteRole.publicKey,
-          anchor.web3.LAMPORTS_PER_SOL
+          anchor.web3.LAMPORTS_PER_SAFE
         );
         await provider.connection.requestAirdrop(
           vault,
-          anchor.web3.LAMPORTS_PER_SOL
+          anchor.web3.LAMPORTS_PER_SAFE
         );
 
         let msState = await program.account.ms.fetch(msPDA);
@@ -1346,7 +1346,7 @@ describe("Programs", function(){
         expect(txState.status).to.have.property("draft");
         // attach an instruction
         const [ixPDA] = await getIxPDA(txPDA, new anchor.BN(1), program.programId);
-        const withdrawIx = await SystemProgram.transfer({fromPubkey: vault, toPubkey: provider.wallet.publicKey, lamports: LAMPORTS_PER_SOL/2});
+        const withdrawIx = await SystemProgram.transfer({fromPubkey: vault, toPubkey: provider.wallet.publicKey, lamports: LAMPORTS_PER_SAFE/2});
         const addWithdrawIxTx = await rolesProgram.methods.addProxy(withdrawIx)
           .accounts({
             multisig: msPDA,

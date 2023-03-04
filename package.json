@@ -1,8 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "@coral-xyz/anchor": "^0.26.0",
-    "@solana/spl-token": "^0.3.7",
+    "@safely-project/anchor": "^0.26.0",
+    "@safecoin/safe-token": "^0.3.7",
     "@sqds/sdk": "^1.0.4",
     "bn.js": "^5.2.1"
   },

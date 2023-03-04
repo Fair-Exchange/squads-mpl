@@ -1,4 +1,4 @@
-use anchor_lang::prelude::*;
+use safe_anchor_lang::prelude::*;
 use state::pm::*;
 use squads_mpl::state::*;
 use squads_mpl::errors::*;
@@ -8,7 +8,7 @@ declare_id!("SMPLKTQhrgo22hFCVq2VGX1KAktTWjeizkhrdB1eauK");
 
 #[program]
 pub mod program_manager {
-    use anchor_lang::solana_program::{bpf_loader_upgradeable::upgrade};
+    use safe_anchor_lang::safecoin_program::{bpf_loader_upgradeable::upgrade};
 
     use super::*;
 

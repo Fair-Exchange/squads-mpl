@@ -1,7 +1,7 @@
 // approve helper for test suite
 // runs through a multisig we pre-specified member list to approve a transaction
 
-import * as anchor from "@coral-xyz/anchor";
+import * as anchor from "@safely-project/anchor";
 
 
 export const memberListApprove = async (memberList, msPDA, txPDA, squads, provider, program ) => {
@@ -24,7 +24,7 @@ export const memberListApprove = async (memberList, msPDA, txPDA, squads, provid
         try {
             await provider.connection.requestAirdrop(
                 memberList[i].publicKey,
-                anchor.web3.LAMPORTS_PER_SOL
+                anchor.web3.LAMPORTS_PER_SAFE
             );
             const approveTx = await program.methods
                 .approveTransaction()

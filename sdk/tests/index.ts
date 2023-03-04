@@ -1,7 +1,7 @@
 import { assert, expect } from "chai";
 import { describe } from "mocha";
 import Squads from "../src/index";
-import { PublicKey, Keypair } from "@solana/web3.js";
+import { PublicKey, Keypair } from "@safecoin/web3.js";
 import { Wallet, web3 } from "@project-serum/anchor";
 import NodeWallet from "@project-serum/anchor/dist/cjs/nodewallet";
 
@@ -19,7 +19,7 @@ describe("Squads SDK", () => {
   describe("Basic Functionality", () => {
     it("Constructs Squads object", () => {
       const squad = Squads.localnet(wallet);
-      expect(squad.connection.rpcEndpoint).to.equal("http://localhost:8899");
+      expect(squad.connection.rpcEndpoint).to.equal("http://localhost:8328");
       assert(squad.multisigProgramId.equals(DEFAULT_MULTISIG_PROGRAM_ID));
       assert(
         squad.programManagerProgramId.equals(DEFAULT_PROGRAM_MANAGER_PROGRAM_ID)

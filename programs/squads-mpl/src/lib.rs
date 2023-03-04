@@ -3,9 +3,9 @@
     https://github.com/squads-protocol/squads-mpl
 */
 
-use anchor_lang::{
+use safe_anchor_lang::{
     prelude::*,
-    solana_program::{
+    safecoin_program::{
         instruction::Instruction,
         program::invoke_signed
     }
@@ -127,7 +127,7 @@ pub mod squads_mpl {
     pub fn remove_member(ctx: Context<MsAuth>, old_member: Pubkey) -> Result<()> {
         // if there is only one key in this multisig, reject the removal
         if ctx.accounts.multisig.keys.len() == 1 {
-            return err!(MsError::CannotRemoveSoloMember);
+            return err!(MsError::CannotRemoveSafeoMember);
         }
         ctx.accounts.multisig.remove_member(old_member)?;
 
